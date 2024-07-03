@@ -35,12 +35,61 @@ git config --global user.email "zip95297@gmail.com"
 
 ### *本地* GIT代码管理
 
+#### 本地仓库的建立 以及工作内容的提交
+
 在对git进行了简单的配置之后，在本地建立一个仓库学习本地使用。以当前“PreLearn”为例子，建立一个仓库。首先在当前仓库**根目录**下，使用`git init`初始化本地仓库。在建立了本地仓库之后，可以发现在项目的根目录下，出现了一个名为.git的文件夹：
 ![file not found](image-1.png)
 
 该.git的文件夹中即包括了暂存区和本地仓库的部分，若在本地想要删除git仓库，保留原文件，可以使用`rm -rf ./.git`
 
-在建立了本地的git仓库后，在工作区中进行工作，然后使用git status检查工作区状态（）
+在建立了本地的git仓库后，在工作区中进行工作，然后使用`git status`检查工作区状态（提示将工作区的修改加入到暂存区中）
 ![file not found](image-2.png)
+在使用该命令后git会将未暂存的改动标注出来。
+
+然后使用`git add <file>`命令将工作区中的文件暂存到暂存区中。
+![file not found](image-3.png)
+添加到暂存区后会提示还未提交commit到本地仓库的暂存修改。
+
+在将工作内容添加到暂存区之后，使用`git commit -m "message"`将暂存区中的修改提交到本地仓库中去。
+![file not found](image-4.png)
+
+至此，已经学会了如何使用本地的工作文件建立git仓库并使用git将工作修改保存在仓库中。
+
+##### 提交时忽略部分文件：.gitignore
+
+在提交时有些文件不需要提交到仓库中，可以在文件夹中建立.gitignore文件进行标注，在.gitignore中标注的文件将不会再被添加到本地仓库中去。例如当前仓库中的文件结构如下：
+
+```txt
+PreLearning
+├── Direction.pdf
+├── README.md
+└── Week1
+    ├── ML_note
+    │   └── ML.md
+    └── git_note
+        ├── Git.md
+        ├── image-1.png
+        ├── image-2.png
+        ├── image-3.png
+        ├── image-4.png
+        └── image.png
+```
+
+倘若在文件夹中，存在数据集或者其他不想同步到仓库中去的文件，可以在文件夹中`touch .gitignore`，然后在文件中标注不想被管理追踪的文件。
+![file not found](image-5.png)
+通过这样进行标注，文件夹中的所有的pth后缀的文件将不会被添加到仓库中。在检查状态时可以使用`git status --ignored`检查忽略掉不需要被追踪的文件之后的暂存区状态。
+
+#### 恢复与回退至之前某一状态
+
+##### 工作区与仓库中的内容对比
+
+git作为版本控制工具，其在实际使用中，对工作内容进行时光回溯的功能非常重要。例如，我要对比当前工作修改的文件Git.md和仓库中保存的有什么区别，可以使用`git diff <file>`进行比较：（在命令符号':'后输入q推出查看）
+![file not found](image-6.png)
+
+##### 版本回退
+
+to do
 
 ### *远程* GIT代码管理
+
+to do
