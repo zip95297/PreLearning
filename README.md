@@ -28,8 +28,8 @@ name
 2. git代码仓库学习
     - [ ] [git基础教程](https://zhuanlan.zhihu.com/p/30044692)
     - [ ] [git图解](https://mp.weixin.qq.com/s/Fg5rht0k583YvHD0pMJ_BQ)
-    - [ ] [git仓库快速导入以及同步更新](https://gitee.com/help/articles/4284#article-header1)
-    - [ ] [gitee帮助中心](https://gitee.com/help)
+    - [x] [git仓库快速导入以及同步更新](https://gitee.com/help/articles/4284#article-header1)
+    - [x] [gitee帮助中心](https://gitee.com/help)
     - [ ] 记录笔记
 
 - 输出:
