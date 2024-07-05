@@ -153,14 +153,160 @@ think：分支指针（branch）例如main、master、feacher，指向一个comm
 
 ![file not found](image-13.png)
 
-##### bug分支
+##### 分支类别介绍
+
+在上述中提到的main分支（用于发布）和dev（develop，用于开发功能）两条主要分支之外，还有三种临时性分支：
+
+- feature分支
+- release分支
+- bug分支
+
+这三种临时性分支使用完以后应当删除。
 
 ##### feature分支
 
-##### 多人协作
+该分支从develop分支中分离出来，用于开发某个特定的功能，开发完成后并入dev分支中并删除feature分支。该类分支命名为feature-*(对新特征的说明)。具体在开发中的例子如下：
 
-##### rebase
+```shell
+git switch -c feature-order
+# 进行新功能order的开发，完成后
+git add ./order.py
+git commit -m "add functional order"
+git push -u origin main
+# 如果开发过程中要删除该feature分支
+# git branch -D feature-order
+# 之后将新功能并入dev主开发分支中
+git switch dev
+git merge --no-ff -m "new feature order"
+
+```
+
+##### release分支
+
+预发布分支，指发布正式版本之前（即合并到main分支之前），我们可能需要有一个预发布的版本进行测试。预发布分支是从Develop分支上面分出来的，预发布结束以后，必须合并进Develop和main分支。它的命名，可以采用release-*的形式。流程如下：
+
+```shell
+# 从dev上创建并切换到一个预发布的分支
+git branch -b release-1.2 develop
+# 在确认可以发布以后，使将该分支合并到main分支上
+git checkout main
+git merge --no-ff release-1.2
+# 对合并的新生成的节点做一个标签
+git tag -a 1.2
+# 在合并到dev分支上
+git checkout develop
+git merge --no-ff release-1.2
+# 最后删除预发布分支
+git branch -d release-1.2
+```
+
+release分支可以看作开发分支和main要发布的分支的一个过渡，dev切换到release后进行最后检查以及修改之后再进行发布。
+
+##### bug分支
+
+软件正式发布以后，难免会出现bug。这时就需要创建一个分支，进行bug修补。修补bug分支是从**main**分支上面分出来的。修补结束以后，再合并进**main**和**develop**分支。可以采用fixbug-*的形式进行命名。
+
+![file not found](image-14.png)
+
+```shell
+# 创建一个修补bug分支
+git checkout -b fixbug-0.1 main
+# 修补结束后，合并到master分支
+git checkout main
+git merge --no-ff fixbug-0.1
+git tag -a 0.1.1
+# 再合并到develop分支：
+git checkout develop
+git merge --no-ff fixbug-0.1
+# 最后，删除"修补bug分支"
+git branch -d fixbug-0.1
+```
+
+#### 标签管理
+
+要发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。将来无论什么时候，取某个标签的版本，就是把那个打标签的时刻的历史版本取出来。所以，标签也是版本库的一个快照。Git的标签虽然是版本库的快照，但其实它就是指向某个commit的指针（跟分支很像对不对？但是分支可以移动，标签不能移动），所以，创建和删除标签都是瞬间完成的。
+
+虽然commit也有commit版本号，但是版本号是一串没有意义的字符串，因此通过tag可以将特定的某个commit起一个名字，绑定在一起。
+
+##### 创建标签
+
+要对某个分支最近的commit创建标签很容易，首先切换到要打标签的分支上：
+
+```shell
+# 查看所有分支
+git branch
+# 切换要打标签的分支
+git checkout main
+# 创建标签
+git tag v1.2
+# 查看所有标签
+git tag
+```
+
+通过上述方法可以在某个分支的最近的提交上打上一个tag，但是如果想要在历史commit中打tag，可以通过`git log`找到commit版本号，然后通过`git tag v1.1 <commit id>`的方式打上标签。
+
+`git tag`列出标签不是按照时间顺序列出的，而是按照字母顺序，可以通过`git show <tag name>`查看标签名对应提交的具体信息。
+
+还可以创建带有说明的标签:`git tag -a v1.0 -m "this is a publish version"`，通过-a选项指定tagname，-m选项提交标签说明文字。
+
+##### 操作标签
+
+- 发布标签：`git tag <tag name>`只会把标签打在本地，并不会自动推送，如果要发布标签到远程，可以使用`git push origin <tag name>`推送某个指定的标签或者使用`git push origin --tags`将所有尚未推送的本地标签推送到远程。
+- 删除
+  - 如果标签只在本地 `git tag -d <tag name>`
+  - 如果已经推送到远程 `git tag -d <tag name>` 和  `git push origin :refs/tags/<tag name>`
 
 ### *远程* GIT代码管理
 
-to do
+#### 配置GitHub账号
+
+在首次使用git进行推送时，首先要配置ssh连接github服务器的key。
+
+1. 创建SSH key：  
+    `ssh-keygen -t rsa -C "zip95297@gmail.com"`
+2. 在用户目录下的.ssh文件夹找到上一步生成的私钥文件和公钥文件(*.pub)
+3. 在GitHub>>Account settings>>SSH Keys中添加公钥文件中的内容并Add Key。
+
+至此，当前账号所登陆的电脑可以使用SSH服务连接到GitHub服务器，可以使用当前电脑进行推送。
+
+#### 远程仓库管理-创建与推送、删除
+
+在GitHub上创建了一个空的远程仓库之后，要想把本地的文件上传到远程仓库中去。在对本地仓库`git init`初始化之后，首先链接到远程仓库`git remote add origin git@github.com:zip95297/PreLearning.git`
+
+如果在GitHub创建远程库时自动生成了README.md文件，可以首先使用`git clone <remote_repo_url>`拉取远程仓库的内容保持同步。
+
+然后就可以把本地库的所有内容（当前分支main）推送到远程库中去`git push -u origin main`。由于远程库是空的，我们第一次推送main分支时，加上了-u参数，Git不但会把本地的main分支内容推送的远程新的master分支，还会把本地的main分支和远程的main分支关联起来，在以后的推送或者拉取时就可以简化命令。
+
+在此之后推送至origin只需要`git push origin main`即可。
+
+如果因为远程仓库地址填错了或者其他原因，要删除远程仓库连接。可以使用`git remote -v`查看远程仓库连接后，用`git remote rm origin`删除origin对应的远程库的连接。
+
+`git pull`用于在建立了本地与远程连接的仓库之间，使本地仓库与远程同步。
+
+#### 多人协作
+
+#### rebase
+
+如果使用远程仓库，多人在同一个分支上协作时，如果使用merge进行合并，很容易出现冲突。即使没有冲突，后push的童鞋不得不先pull，在本地合并，然后才能push成功。
+
+Git rebase 是一个用于合并 Git 分支的命令，它可以将一条分支的修改转移到另一条分支上。通常用于保持项目历史的整洁和线性。
+
+具体来说，使用 `git rebase` 可以做以下几件事情：
+
+1. **将一个分支的修改应用到另一个分支上**：比如将当前分支的修改应用到主分支上。
+
+   ```shell
+   git checkout <目标分支>
+   git rebase <源分支>
+   ```
+
+   这个命令的作用是将 `<源分支>` 上的提交逐个应用到 `<目标分支>` 上，然后将 `<目标分支>` 指向最新的提交。
+
+2. **解决合并冲突**：如果在 rebase 过程中出现冲突，需要手动解决冲突并继续 rebase。
+
+3. **修改提交历史**：通过 rebase 可以调整提交的顺序、合并提交等，使提交历史更加清晰和符合逻辑。
+
+注意事项：
+
+- 使用 `git rebase` 可能会改变提交历史，因此在公共分支上使用时要特别小心，以免影响其他开发者的工作。
+- 建议在 rebase 前先备份当前分支，以防万一。
