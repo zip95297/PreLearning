@@ -19,22 +19,37 @@ name
 
 ## Plans
 
+- [ ] 表示还未完成
+- [x] 表示已完成
+
 ### Week1_(0630-**0706**)
 
 1. [神经网络与深度学习相关概念以及Pytorch的基本操作](https://www.bilibili.com/video/BV1Wv411h7kN/)
-    - [ ] 第一节：P1-11 除了 5，8
-    - [ ] 深度学习：P13，14
-    - [ ] 记录笔记
+    - [x] 第一节：P1-11 除了 5，8
+    - [x] 深度学习：P13，14
+    - [x] 记录笔记
 2. git代码仓库学习
-    - [ ] [git基础教程](https://zhuanlan.zhihu.com/p/30044692)
-    - [ ] [git图解](https://mp.weixin.qq.com/s/Fg5rht0k583YvHD0pMJ_BQ)
+    - [x] [git基础教程](https://zhuanlan.zhihu.com/p/30044692)
+    - [x] [git图解](https://mp.weixin.qq.com/s/Fg5rht0k583YvHD0pMJ_BQ)
     - [x] [git仓库快速导入以及同步更新](https://gitee.com/help/articles/4284#article-header1)
     - [x] [gitee帮助中心](https://gitee.com/help)
-    - [ ] 记录笔记
+    - [x] 记录笔记
 
 - 输出:
-  - 在[Gitee](https://gitee.com/)建立仓库并使用git仓库管理
-  - 把笔记上传到仓库中
+  - [x] 在[Gitee](https://gitee.com/)建立仓库并使用git仓库管理
+  - [x] 把笔记上传到仓库中,HW1暂时不写
+
+### Week2_(0707-**0713**)
+
+1. [ ] 机器学习和深度学习任务[第二节ML任务攻略](https://www.bilibili.com/video/BV1Wv411h7kN?p=18)
+2. Linux环境配置以及基本命令在Windows上运行WSL2
+    - [ ] [linux command line](https://www.kancloud.cn/thinkphp/linux-command-line/39431)
+    - [ ] [适用于Linux的Windows子系统文档](https://docs.microsoft.com/zh-cn/windows/wsl/)
+    - [ ] [在Windows10/11安装WSL2 Ubuntu20.04](https://zhuanlan.zhihu.com/p/466001838)
+
+- 输出：
+  - [ ] 视频课程学习笔记，上传到仓库中，作业部分暂时不完成
+  - [ ] 完成linux的配置以及基本操作的学习
 
 ## Targets
 
