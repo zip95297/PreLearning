@@ -41,7 +41,7 @@ name
 
 ### Week2_(0707-**0713**)
 
-1. [ ] 机器学习和深度学习任务[第二节ML任务攻略](https://www.bilibili.com/video/BV1Wv411h7kN?p=18)
+1. 机器学习和深度学习任务[第二节ML任务攻略](https://www.bilibili.com/video/BV1Wv411h7kN?p=18)
 2. Linux环境配置以及基本命令在Windows上运行WSL2
     - [ ] [linux command line](https://www.kancloud.cn/thinkphp/linux-command-line/39431)
     - [ ] [适用于Linux的Windows子系统文档](https://docs.microsoft.com/zh-cn/windows/wsl/)
