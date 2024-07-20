@@ -56,19 +56,19 @@ name
 1. [第三节-卷积神经网络（CNN）](https://www.bilibili.com/video/BV1Wv411h7kN?p=31)
 2. [第四节-循环神经网络（RNN）](https://www.bilibili.com/video/BV1J94y1f7u5?p=28)
 3. 安装Jupyter，熟悉Jupyter的使用方法。
-    - [ ] 安装方法：[搭建Python轻量级编写环境](https://zhuanlan.zhihu.com/p/158824489)
-    - [ ] 使用方法：
-        - [ ] [Jupyter使用教程](https://zhuanlan.zhihu.com/p/33105153)
-        - [ ] [快速上手Jupyter](https://zhuanlan.zhihu.com/p/32320214)
+    - [x] 安装方法：[搭建Python轻量级编写环境](https://zhuanlan.zhihu.com/p/158824489)
+    - [x] 使用方法：
+        - [x] [Jupyter使用教程](https://zhuanlan.zhihu.com/p/33105153)
+        - [x] [快速上手Jupyter](https://zhuanlan.zhihu.com/p/32320214)
 4. [Pytorch包学习](https://pytorch.apachecn.org/#/docs/1.4/blitz/tensor_tutorial)
 5. Paddle学习：
-    - [ ] [Paddle与Pytorch的转换](https://blog.csdn.net/shaojie_45/article/details/115445796?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-115445796-blog-119469002.235%5ev38%5epc_relevant_anti_t3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-115445796-blog-119469002.235%5ev38%5epc_relevant_anti_t3&utm_relevant_index=2)
-    - [ ] [飞桨 PaddlePaddle-源于产业实践的开源深度学习平台](https://www.paddlepaddle.org.cn/tutorials/projectdetail/5603475)
+    - [x] [Paddle与Pytorch的转换](https://blog.csdn.net/shaojie_45/article/details/115445796?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-115445796-blog-119469002.235%5ev38%5epc_relevant_anti_t3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-115445796-blog-119469002.235%5ev38%5epc_relevant_anti_t3&utm_relevant_index=2)
+    - [x] [飞桨 PaddlePaddle-源于产业实践的开源深度学习平台](https://www.paddlepaddle.org.cn/tutorials/projectdetail/5603475)
 
 - 输出：
-  - [ ] 视频课程学习笔记，以及作业 HW1、作业 HW2、作业 HW3 的试验。
-  - [ ] 完成环境配置以及对 PyTorch 的初步了解。
-  - [ ] 初步了解 PaddlePaddle，以及与 PyTorch 的转换关系。
+  - [x] 视频课程学习笔记，以及作业 HW1、作业 HW2、作业 HW3 的试验。
+  - [x] 完成环境配置以及对 PyTorch 的初步了解。
+  - [x] 初步了解 PaddlePaddle，以及与 PyTorch 的转换关系。
 
 ## Targets
 
