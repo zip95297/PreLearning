@@ -29,3 +29,38 @@
 第二次简化是指：在卷积神经网络中，不将每一个receptive field都设立对应的参数，而是通过共享参数的操作，将多个receptive field的对应参数简化成卷积核，通过这种方法将全连接神经网路进一步简化。得到了卷积神经网络。其中每个被共享的参数称为filter。每一层中可能又多个filter。
 
 ![alt text](image-5.png)
+
+卷积层由这些filter构成：
+
+![alt text](image-7.png)
+
+其中每个filter的channel数和输入相同，输出的channel个数和filter（kernel）的个数相同。
+
+计算的过程是，每个filter和输入对应位置相乘然后求和，得到一个数值，作为一个输出，然后按照padding和stride知道把整个输入全部扫完。
+
+每个卷积层的输出称为特征图（输出的channel可能不为3）
+
+## 两个角度考虑CNN
+
+![alt text](image-8.png)
+
+从对全连接神经网络的角度来说，全卷积神经网络通过两个步骤：设计Recepive filed，参数共享来降低全连接神经网络的数量。
+
+而从filter的角度，本质上是上面两个步骤的融合设计。
+
+## 最大池化 Max Pooling
+
+![alt text](image-9.png)
+
+![alt text](image-10.png)
+
+在一个窗口内选择最大的那个数值作为代表。通过这种方法可以降低网络中间层输出的特征图的尺寸。从而减小运算量。
+
+其中池化操作的窗口大小可以自行设置。
+
+## 整个CNN的组成
+
+![alt text](image-11.png)
+
+由一下基本模块 卷积 非线性激活 池化 展平 最后 连接全连接分类器。
+
