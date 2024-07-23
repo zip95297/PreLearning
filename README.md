@@ -70,6 +70,21 @@ name
   - [x] 完成环境配置以及对 PyTorch 的初步了解。
   - [x] 初步了解 PaddlePaddle，以及与 PyTorch 的转换关系。
 
+### Week4_(0721-**0727**)
+
+1. 神经网络训练任务
+    - [ ] [第四节-自注意力机制](https://www.bilibili.com/video/BV1Wv411h7kN?p=38)
+    - [ ] [第五节-类神经网络训练不起来怎么办](https://www.bilibili.com/video/BV1Wv411h7kN?p=48)
+2. PyTorch入门中剩下部分的学习
+    - [ ] [PyTorch1.4 教程&文档](https://pytorch.apachecn.org/#/docs/1.4/README)
+3. PaddlePaddle包配置尝试
+    - [ ] [只用指南](https://www.paddlepaddle.org.cn/documentation/docs/zh/guides/index_cn.html)
+
+- 输出：
+    - [ ] 视频课程学习笔记以及作业
+    - [ ] 完成PyTorch教程上的代码教程
+    - [ ] 完成环境配置以及对PaddlePaddle配置的初步实践
+
 ## Targets
 
 0. Python
