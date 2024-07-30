@@ -6,13 +6,13 @@
 
 如何让计算机系统去理解人类语言？如何准确的表达一个词的意义？
 
-![alt text](image.png)
+![file not found](img_note/image.png)
 
 传统人类的做法是，用一个想法或者事情的标识去解释词语，就是语义标识。
 
 早期的NLP中，通常使用WordNet，一个包含同义词集和超名词列表的同义词库。将词语与其同义词关联起来。
 
-![alt text](image-1.png)
+![file not found](img_note/image-1.png)
 
 但是这种联系相近词意的方法存在一些问题：
     
@@ -22,20 +22,20 @@
   - 需要人工去创造连接以及更新改写。
   - 无法由计算机去计算词与词之间的相似度。
 
-![alt text](image-2.png)
+![file not found](img_note/image-2.png)
 
 上面这些问题，就是深度学习模型能够解决的，也是其优势所在。
 
 在传统的NLP中，把词语看作离散符号（discrete symbol）。
 例如hotel，conference，motel这些词在传统NLP中被称为localist presentation（地方性表示），因为这些单词通常被表示为one-hot向量。每个不同的单词在某个指定的维度是1，其余为0。
 
-![alt text](image-3.png)
+![file not found](img_note/image-3.png)
 
 在这种方法中，如果字典中的词特别多，每个词会对应一个维度很高的向量。
 
 而且一个重要的问题是，这种离散的表示方法没有办法表示出词与词之间的相似性：
 
-![alt text](image-4.png)
+![file not found](img_note/image-4.png)
 
 例如，如果用户想要搜索Seattle hotel，却写成了Seattle motel，系统本应该匹配与“西雅图酒店”的搜索结果，但是这种表示方法下，hotel和motel对应的两个one-hot向量是正交的，相似度为0。
 
@@ -49,7 +49,7 @@
 
 这个思想是在深度学习中一个非常成功的思想。
 
-![alt text](image-5.png)
+![file not found](img_note/image-5.png)
 
 就是使用上下文来代表一个词的含义。
 
@@ -61,7 +61,7 @@
 
 ## Word2vec算法介绍
 
-![alt text](image-6.png)
+![file not found](img_note/image-6.png)
 
 word2vec是用于学习词向量的框架。
 
@@ -74,13 +74,13 @@ word2vec是用于学习词向量的框架。
 
 下图是一个例子，给定了c的情况下，计算o的概率：
 
-![alt text](image-7.png)
+![file not found](img_note/image-7.png)
 
 关键的问题是如何调整vectors来最大化这个概率。
 
 ## word2vec 的优化过程
 
-![alt text](image-8.png)
+![file not found](img_note/image-8.png)
 
 在文本上使用滑动窗口，依次计算每个t位置的中心词C和窗口内的上下文词O的相似度，并得出似然性likelihood
 
@@ -99,13 +99,13 @@ word2vec是用于学习词向量的框架。
 
 然后对于一个重新向量为c，上下文向量为o的窗口：$$P(o|c)=\frac{e^{u_o^T v_c}}{\sum_{w \in V} e^{u_w^T v_c}}$$
 
-![alt text](image-9.png)
+![file not found](img_note/image-9.png)
 
 下面是介绍该方法的例子：
 
-![alt text](image-10.png)
+![file not found](img_note/image-10.png)
 
-![alt text](image-11.png)
+![file not found](img_note/image-11.png)
 
 1. 通过点积运算，来计算两个向量之间的相似度
 2. 通过e取指数操作将所有的数映射为正数（同时保证了大小关系）
@@ -113,7 +113,7 @@ word2vec是用于学习词向量的框架。
 
 ## word2vec的训练过程
 
-![alt text](image-12.png)
+![file not found](img_note/image-12.png)
 
 如上图，模型的参数是一个 2V x D 的矩阵，有V的词（一个词有uv两个词向量），每个词向量的维度是D。
   - 通过梯度下降的方法来优化参数
@@ -122,13 +122,16 @@ word2vec是用于学习词向量的框架。
 对上述条件概率表达式计算对于Vc的梯度过程如下：
 
 换底：
-![alt text](image-13.png)
+
+![file not found](img_note/image-13.png)
 
 复合函数求导 链式法则：
-![alt text](image-14.png)
+
+![file not found](img_note/image-14.png)
 
 最终化简为：
-![alt text](image-15.png)
+
+![file not found](img_note/image-15.png)
 
 理解： 后面的减数可以看做一个Uo期望（在整个词汇表中的加权平均值），而前面的则是一个Uo的观察值。
 
