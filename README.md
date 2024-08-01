@@ -97,15 +97,32 @@ Compositionality](https://arxiv.org/pdf/1310.4546.pdf)
             - [x] [Word2vec Parameter Learning Explained](https://arxiv.org/pdf/1411.2738.pdf)
     2. [x] 依赖分析 [Lecture 4 - Dependency Parsing](https://www.bilibili.com/video/BV12z4y1i7vh?p=4)
     3. [x] 语言模型 [Lecture 5 - Language Models and RNNs](https://www.bilibili.com/video/BV12z4y1i7vh?p=5)
-    4. [ ] 预训练模型 [Lecture 10 - Transformers and Pretrained Model](https://www.bilibili.com/video/BV12z4y1i7vh?p=10)
+    4. [x] 预训练模型 [Lecture 10 - Transformers and Pretrained Model](https://www.bilibili.com/video/BV12z4y1i7vh?p=10)
 2. [x] 实战演练-阶段一
     - [x] [NLP](https://github.com/fastai/fastbook/blob/master/10_nlp.ipynb)
     - [x] [midlevel_data](https://github.com/fastai/fastbook/blob/master/11_midlevel_data.ipynb)
-    - [ ] [nlp_dive](https://github.com/fastai/fastbook/blob/master/10_nlp.ipynb)
+    - [x] [nlp_dive](https://github.com/fastai/fastbook/blob/master/10_nlp.ipynb)
+- 输出：
+    1. [x] 视频课程学习笔记以及作业
+    2. [x] 阶段一涵盖NLP中模型构建的基本步骤，记录实验结果
+
+### Week6_(0804-**0810**)
+
+1. [ ] NLP相关任务：
+    1. [ ] 翻译任务 [Lecture 7 - Translation, Seq2Seq, Attention](https://www.bilibili.com/video/BV12z4y1i7vh?p=7)
+    2. [ ] 问答任务 [Lecture 11 - Question Answering](https://www.bilibili.com/video/BV12z4y1i7vh?p=11)
+    3. [ ] 自然语言生成任务 [Lecture 12 - Natural Language Generation](https://www.bilibili.com/video/BV12z4y1i7vh?p=12)
+    4. [ ] 共指消解任务 [Lecture 13 - Coreference Resolution](https://www.bilibili.com/video/BV12z4y1i7vh?p=13)
+2. [ ] 实战演练-阶段二
+    1. [ ] [词嵌入 TransE 实现](https://github.com/zulihit/TransE)
+    2. [ ] [词嵌入 Glove 实现](https://github.com/stanfordnlp/GloVe)
+    3. [ ] [序列模型与 Attention](https://zhuanlan.zhihu.com/p/601633905)
+    4. [ ] [情感分析模型](https://zhuanlan.zhihu.com/p/599542107)
+    5. [ ] [关系抽取模型](https://github.com/thunlp/OpenNRE)
 - 输出：
     1. [ ] 视频课程学习笔记以及作业
-    2. [ ] 阶段一涵盖NLP中模型构建的基本步骤，记录实验结果
-
+    2. [ ] 阶段二主要涵盖词嵌入学习及基础模型应用两部分内容完成模型调优，记录实验结果
+    
 
 ## Targets
 
