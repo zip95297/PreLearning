@@ -87,20 +87,20 @@ name
 
 ### Week5_(0728_**0803**)
 
-1. [ ] NLP相关基础知识
-    1. [ ]自然语言处理导引以及词向量
-        - [ ] [Lecture 1 - Introduction and Word Vector](https://www.bilibili.com/video/BV12z4y1i7vh?p=1)
-        - [ ] Word2Vector 参考资料：
-            - [ ] [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)
-            - [ ] [Distributed Representations of Words and Phrases and their
+1. [x] NLP相关基础知识
+    1. [x]自然语言处理导引以及词向量
+        - [x] [Lecture 1 - Introduction and Word Vector](https://www.bilibili.com/video/BV12z4y1i7vh?p=1)
+        - [x] Word2Vector 参考资料：
+            - [x] [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)
+            - [x] [Distributed Representations of Words and Phrases and their
 Compositionality](https://arxiv.org/pdf/1310.4546.pdf)
-            - [ ] [Word2vec Parameter Learning Explained](https://arxiv.org/pdf/1411.2738.pdf)
-    2. [ ] 依赖分析 [Lecture 4 - Dependency Parsing](https://www.bilibili.com/video/BV12z4y1i7vh?p=4)
-    3. [ ] 语言模型 [Lecture 5 - Language Models and RNNs](https://www.bilibili.com/video/BV12z4y1i7vh?p=5)
+            - [x] [Word2vec Parameter Learning Explained](https://arxiv.org/pdf/1411.2738.pdf)
+    2. [x] 依赖分析 [Lecture 4 - Dependency Parsing](https://www.bilibili.com/video/BV12z4y1i7vh?p=4)
+    3. [x] 语言模型 [Lecture 5 - Language Models and RNNs](https://www.bilibili.com/video/BV12z4y1i7vh?p=5)
     4. [ ] 预训练模型 [Lecture 10 - Transformers and Pretrained Model](https://www.bilibili.com/video/BV12z4y1i7vh?p=10)
-2. [ ] 实战演练-阶段一
-    - [ ] [NLP](https://github.com/fastai/fastbook/blob/master/10_nlp.ipynb)
-    - [ ] [midlevel_data](https://github.com/fastai/fastbook/blob/master/11_midlevel_data.ipynb)
+2. [x] 实战演练-阶段一
+    - [x] [NLP](https://github.com/fastai/fastbook/blob/master/10_nlp.ipynb)
+    - [x] [midlevel_data](https://github.com/fastai/fastbook/blob/master/11_midlevel_data.ipynb)
     - [ ] [nlp_dive](https://github.com/fastai/fastbook/blob/master/10_nlp.ipynb)
 - 输出：
     1. [ ] 视频课程学习笔记以及作业
