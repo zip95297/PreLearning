@@ -8,11 +8,11 @@
 
 Seq2Seq是指将序列转换成序列的结构，由两个RNN组成，分别为encoder和decoder，encoder将输入进行编码，decoder将编码后的结果进行解码，生成输出，图示如下：
 
-<img src="./imgs_noteencoderRNNde.jpg" style="zoom: 67%;" />
+<img src="./imgs_note/encoderRNNde.jpg" style="zoom: 67%;" />
 
 训练方法为计算输出的交叉熵损失函数，然后进行梯度下降，以机器翻译为例，其损失函数计算方法如下：
 
-<img src="./imgs_noteMLtranslate.jpg" style="zoom:67%;" />
+<img src="./imgs_note/MLtranslate.jpg" style="zoom:67%;" />
 
 注意解码部分会用两个特殊标记表示开始和结束：START表示开始，END表示结束。
 
@@ -32,7 +32,7 @@ $$
 $$
 这里的好是指对数概率最大的输出，来来看一个具体例子：
 
-<img src="./imgs_notebeamSearch.jpg" style="zoom:67%;" />
+<img src="./imgs_note/beamSearch.jpg" style="zoom:67%;" />
 
 注意如果直接比较对数概率的值，那么会偏好比较短的输出，一个解决方法是比较对数概率的平均值，即
 $$
@@ -72,7 +72,7 @@ $$
 
 **图示如下：**
 
-<img src="./imgs_notes2swithAttention.jpg" style="zoom:67%;" />
+<img src="./imgs_note/s2swithAttention.jpg" style="zoom:67%;" />
 
 利用Attention机制，加快了计算速度，也缓解了梯度消失，还增加了可解释性。
 
@@ -80,13 +80,13 @@ $$
 
 Question answering类似于阅读理解，给定原文P和问题Q，我们希望给出回答A，模式如下：
 
-<img src="./imgs_noteQA.jpg" style="zoom:67%;" />
+<img src="./imgs_note/QA.jpg" style="zoom:67%;" />
 
 ## Stanford Question Answering Dataset (SQuAD)
 
 SQuAD是问答系统的一个经典数据集：
 
-<img src="./imgs_notesquad.jpg" style="zoom:67%;" />
+<img src="./imgs_note/squad.jpg" style="zoom:67%;" />
 
 每个问题有3个答案，下面介绍两种评估结果的方式：
 
@@ -103,11 +103,11 @@ $$
 
 该模型的整体架构如下：
 
-<img src="./imgs_noteSAR.jpg" style="zoom:67%;" />
+<img src="./imgs_note/SAR.jpg" style="zoom:67%;" />
 
 具体方式为分别对原文P以及问题Q进行编码，然后利用attention计算start以及end，具体如下:
 
-<img src="./imgs_noteSAR++.jpg" style="zoom:67%;" />
+<img src="./imgs_note/SAR++.jpg" style="zoom:67%;" />
 
 
 
@@ -158,7 +158,7 @@ Neural summarization使用生成加复制机制来产生摘要：
 
 复制机制的图示如下：
 
-![](./imgs_notecopyMechan.jpg)
+![](./imgs_note/copyMechan.jpg)
 
 每次生成单词前计算$p_{\text {gen}}$，以$p_{\text {gen}}$的概率生成单词，$1-p_{\text {gen}}$的概率从文本中提取：
 $$
@@ -186,15 +186,15 @@ bottom-up summarization将生成摘要分为两个阶段：
 
 考虑如下文本，蓝色标注部分表示实体：
 
-![](./imgs_noteblue.jpg)
+![](./imgs_note/blue.jpg)
 
 红色部分均指Obama：
 
-![](./imgs_notered.jpg)
+![](./imgs_note/red.jpg)
 
 橙色部分均指Hillary：
 
-![](./imgs_noteorange.jpg)
+![](./imgs_note/orange.jpg)
 
 ## 应用
 
@@ -215,7 +215,7 @@ bottom-up summarization将生成摘要分为两个阶段：
 
 ## Coreference Resolution in Two Steps
 
-![](./imgs_notetwosteps.jpg)
+![](./imgs_note/twosteps.jpg)
 
 #### Mention Detection
 
@@ -237,7 +237,7 @@ bottom-up summarization将生成摘要分为两个阶段：
 - 一个相关的语言概念是anaphora：当一个术语（anaphora）指另一个术语（antecedent）时
   - anaphora的解释在某种程度上取决于antecedent的解释
 
-<img src="./imgs_noteanaphora.jpg" style="zoom:67%;" />
+<img src="./imgs_note/anaphora.jpg" style="zoom:67%;" />
 
 #### Four Kinds of Coreference Models
 
@@ -262,7 +262,7 @@ $$
 - 根据模型为每个mention分配得分最高的候选对象
 - NA mention允许模型拒绝将当前提及链接到任何内容
 
-<img src="./imgs_noteranking.jpg" style="zoom:67%;" />
+<img src="./imgs_note/ranking.jpg" style="zoom:67%;" />
 
 在上述模型下，我们希望最大化如下概率:
 $$
@@ -275,7 +275,7 @@ $$
 
 ##### End-to-end Model
 
-![](./imgs_noteend2endModel.jpg)
+![](./imgs_note/end2endModel.jpg)
 
 计算i,j为mention的依据为:
 $$
@@ -297,5 +297,5 @@ $$
 - 在每个步骤中合并一对集群
   - 使用模型来评估哪些聚类合并是好的
 
-<img src="./imgs_notecluster.jpg" style="zoom: 80%;" />
+<img src="./imgs_note/cluster.jpg" style="zoom: 80%;" />
 
