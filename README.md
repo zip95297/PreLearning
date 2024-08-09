@@ -108,20 +108,20 @@ Compositionality](https://arxiv.org/pdf/1310.4546.pdf)
 
 ### Week6_(0804-**0810**)
 
-1. [ ] NLP相关任务：
-    1. [ ] 翻译任务 [Lecture 7 - Translation, Seq2Seq, Attention](https://www.bilibili.com/video/BV12z4y1i7vh?p=7)
-    2. [ ] 问答任务 [Lecture 11 - Question Answering](https://www.bilibili.com/video/BV12z4y1i7vh?p=11)
-    3. [ ] 自然语言生成任务 [Lecture 12 - Natural Language Generation](https://www.bilibili.com/video/BV12z4y1i7vh?p=12)
-    4. [ ] 共指消解任务 [Lecture 13 - Coreference Resolution](https://www.bilibili.com/video/BV12z4y1i7vh?p=13)
-2. [ ] 实战演练-阶段二
-    1. [ ] [词嵌入 TransE 实现](https://github.com/zulihit/TransE)
-    2. [ ] [词嵌入 Glove 实现](https://github.com/stanfordnlp/GloVe)
-    3. [ ] [序列模型与 Attention](https://zhuanlan.zhihu.com/p/601633905)
-    4. [ ] [情感分析模型](https://zhuanlan.zhihu.com/p/599542107)
-    5. [ ] [关系抽取模型](https://github.com/thunlp/OpenNRE)
+1. [x] NLP相关任务：
+    1. [x] 翻译任务 [Lecture 7 - Translation, Seq2Seq, Attention](https://www.bilibili.com/video/BV12z4y1i7vh?p=7)
+    2. [x] 问答任务 [Lecture 11 - Question Answering](https://www.bilibili.com/video/BV12z4y1i7vh?p=11)
+    3. [x] 自然语言生成任务 [Lecture 12 - Natural Language Generation](https://www.bilibili.com/video/BV12z4y1i7vh?p=12)
+    4. [x] 共指消解任务 [Lecture 13 - Coreference Resolution](https://www.bilibili.com/video/BV12z4y1i7vh?p=13)
+2. [x] 实战演练-阶段二
+    1. [x] [词嵌入 TransE 实现](https://github.com/zulihit/TransE)
+    2. [x] [词嵌入 Glove 实现](https://github.com/stanfordnlp/GloVe)
+    3. [x] [序列模型与 Attention](https://zhuanlan.zhihu.com/p/601633905)
+    4. [x] [情感分析模型](https://zhuanlan.zhihu.com/p/599542107)
+    5. [x] [关系抽取模型](https://github.com/thunlp/OpenNRE)
 - 输出：
-    1. [ ] 视频课程学习笔记以及作业
-    2. [ ] 阶段二主要涵盖词嵌入学习及基础模型应用两部分内容完成模型调优，记录实验结果
+    1. [x] 视频课程学习笔记以及作业
+    2. [x] 阶段二主要涵盖词嵌入学习及基础模型应用两部分内容完成模型调优，记录实验结果
     
 
 ## Targets
