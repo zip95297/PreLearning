@@ -122,7 +122,19 @@ Compositionality](https://arxiv.org/pdf/1310.4546.pdf)
 - 输出：
     1. [x] 视频课程学习笔记以及作业
     2. [x] 阶段二主要涵盖词嵌入学习及基础模型应用两部分内容完成模型调优，记录实验结果
-    
+
+### Week7_(0811-**0817**)
+1. 模型压缩入门：
+    1. [x] [模型压缩概述](https://www.bilibili.com/video/BV1ht4y1P73i/?spm_id_from=333.337.search-card.all.click&vd_source=eb1da0153b98ca6ae90d6b0ccaa9550c)
+    2. [x] [模型蒸馏入门](https://www.bilibili.com/video/BV1eb411971p/?spm_id_from=333.788&vd_source=eb1da0153b98ca6ae90d6b0ccaa9550c)
+    3. [x] [模型剪枝入门](https://www.bilibili.com/video/BV1pg4y1J73p/?spm_id_from=333.788&vd_source=eb1da0153b98ca6ae90d6b0ccaa9550c)
+    4. [x] [模型参数量化入门](https://www.bilibili.com/video/BV1bL411U747/?spm_id_from=333.788&vd_source=eb1da0153b98ca6ae90d6b0ccaa9550c)
+2. 论文阅读
+    1. [x] 模型压缩综述论文：Model compression as constrained optimization, with application to neural nets. Part I : general framework
+    2. [x] [其他](https://wiki.modeloverfit.com/index.php/%E6%A8%A1%E5%9E%8B%E7%BB%84Read_List)
+-  输出：
+    1. [x] 视频课程学习笔记
+    2. [x] 论文阅读笔记
 
 ## Targets
 
